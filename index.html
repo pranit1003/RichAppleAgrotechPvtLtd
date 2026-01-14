@@ -51,22 +51,31 @@
             padding: 1rem 2rem;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
+       .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
-        .logo img {
-            width: 80px;
-            height: 80px;
-        }
+.logo img {
+    /* Change: Use height and set width to auto to prevent stretching */
+    height: 60px; 
+    width: auto;
+    
+    /* Optional: Ensures the image looks crisp */
+    object-fit: contain;
+    
+    /* Optional: If your logo is circular, you can add: */
+    /* border-radius: 50%; */
+}
 
-        .logo-text {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #2d5016;
-        }
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2d5016;
+    /* Optional: Prevents text from wrapping on small screens */
+    white-space: nowrap; 
+}
 
         .nav-links {
             display: flex;
@@ -834,15 +843,9 @@
     <header>
         <nav>
             <div class="logo">
-                <svg width="80" height="80" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" fill="#4a7c2c"/>
-                    <path d="M30 70 Q50 40 70 70" stroke="white" stroke-width="4" fill="none"/>
-                    <circle cx="35" cy="65" r="5" fill="#c8e6c9"/>
-                    <circle cx="50" cy="50" r="5" fill="#c8e6c9"/>
-                    <circle cx="65" cy="65" r="5" fill="#c8e6c9"/>
-                </svg>
-                <span class="logo-text">GreenHarvest Agro</span>
-            </div>
+    <img src="images/Rich%20Apple%20Logo%20with%20Name.jpg" alt="Rich Apple Logo">
+    <span class="logo-text">GreenHarvest Agro</span>
+</div>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#" onclick="showPage('home')">Home</a></li>
@@ -1591,5 +1594,6 @@
                         <div class="category-description">EDTA chelated micronutrients for superior absorption and utilization</div>
                     </div>
                 </div>
+
 
                 <div class="category-card">
